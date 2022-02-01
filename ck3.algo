@@ -1,0 +1,54 @@
+ALGORITHM procedure
+VAR
+    tab  : ARRAY_OF  array [100];
+    tab1 : ARRAY_OF integer[100];
+    tab2 : ARRAY_OF integer[100];
+   i : INTEGER ;
+   j : INTEGER ;
+   n : INTEGER ;
+   m : INTEGER ;
+
+BEGIN
+  n := tab1.length ;
+  m := tab2.length ;
+  k := tab.length ;
+   FOR i FROM 0 TO k-1 STEP 1 DO
+   FOR j FROM i+1 TO k-2 STEP 1 DO
+      
+       IF (doc_product(tab[i],tab[j]),ps) THEN
+       END_IF
+   END_FOR
+
+
+    PROCEDURE dot_product ( tab1 , tab2 , ps)
+    VAR
+    i : INTEGER ;
+    ps := 0 ;
+    BEGIN
+        FOR i FROM 0 TO n-1 STEP 1  DO
+            ps := ps + (tab1[i] * tab2[i] )
+        END_FOR
+        IF (ps =0) THEN
+            write ()
+        
+            ELSE
+                write ()
+        END_IF
+    END
+END
+
+FUNCTION dot (tab1 , tab2) : INTEGER
+VAR
+    i,n,m : INTEGER 
+    ps : INTEGER := 0 ;
+BEGIN
+    n := tab1.length
+    m := tab2.length
+    IF (n<>m) THEN
+        write()
+    END_IF
+    FOR i FROM 0 TO n STEP 1 DO
+        ps := ps + (tab1[i] * tab2.[i])
+    END_FOR
+    RETURN ps ;
+END
